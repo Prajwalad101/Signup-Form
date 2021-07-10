@@ -12,14 +12,15 @@ body {
 
 .landing-page {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   width: 70%;
   margin: 7% auto 5% auto;
-  align-items: center;
 }
 
 .title-container {
+  flex: 1 1 320px;
   margin-right: 50px;
-  width: 100%;
 }
 
 .title-container h1 {
@@ -28,7 +29,7 @@ body {
 }
 
 .signup-container {
-  width: 100%;
+  flex: 1 1 325px;
 }
 
 .try-button {
@@ -89,23 +90,35 @@ input[type="submit"] {
 
 /* RESPONSIVE MOBILE LAYOUT */
 
-@media screen and (max-width: 376px) {
-  .title-container h1 {
-    font-size: 1.5em;
-    padding-bottom: 10px;
-  }
-  .landing-page {
-    margin-top: 7vh;
-    flex-direction: column;
+@media screen and (max-width: 1009px) {
+  .title-container {
     text-align: center;
+  }
+  .title-container h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .title-container {
+    margin-right: 0;
+  }
+
+  .title-container h1 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .landing-page {
+    margin: 25% auto 5% auto;
     width: 90%;
   }
   .title-container {
-    margin-right: 0;
     margin-bottom: 40px;
   }
 
-  .try-button {
-    padding: 20px 50px 20px 50px;
+  .title-container h1 {
+    font-size: 27px;
   }
 }
